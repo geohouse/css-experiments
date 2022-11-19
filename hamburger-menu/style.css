@@ -109,3 +109,28 @@ button {
     rotate: var(--rotation);
   }
 }
+
+.button-three {
+  --button-color: purple;
+  overflow: hidden;
+}
+
+.button-three .hamburger {
+  transition: translate 1s, rotate 1s;
+}
+
+.button-three:hover .hamburger {
+  outline: 3px solid red;
+  translate: 10px -25px;
+  rotate: 0.125turn;
+}
+
+.button-three:hover .line {
+  stroke-dasharray: 60 105 60 400;
+  stroke-dashoffset: -90;
+}
+
+.button-three .line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 400;
+}
