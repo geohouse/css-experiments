@@ -29,27 +29,24 @@ button {
   transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
 }
 
-.button-one:hover .line {
+.button-one[aria-expanded="true"] .line {
   transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
 }
 
-.button-one:hover :is(.top, .bottom) {
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
   y: 45;
 }
 
-.button-one:hover .top {
+.button-one[aria-expanded="true"] .top {
   rotate: 45deg;
 }
 
-.button-one:hover .middle {
+.button-one[aria-expanded="true"] .middle {
   opacity: 0;
 }
 
-.button-one:hover .bottom {
+.button-one[aria-expanded="true"] .bottom {
   rotate: -45deg;
-}
-
-.button-one[aria-expanded="true"] .top {
 }
 
 /* button two */
@@ -58,11 +55,11 @@ button {
   --button-color: #ba55d3;
 }
 
-.button-two .line {
+.button-two[data-state="closed"] .line {
   animation: to-open-icon 1s forwards;
 }
 
-.button-two:hover .line {
+.button-two[data-state="opened"] .line {
   animation: to-close-icon 1s forwards;
 }
 
@@ -119,13 +116,12 @@ button {
   transition: translate 1s, rotate 1s;
 }
 
-.button-three:hover .hamburger {
-  outline: 3px solid red;
+.button-three[aria-expanded="true"] .hamburger {
   translate: 10px -25px;
   rotate: 0.125turn;
 }
 
-.button-three:hover .line {
+.button-three[aria-expanded="true"] .line {
   stroke-dasharray: 60 105 60 400;
   stroke-dashoffset: -90;
 }

@@ -43,7 +43,7 @@
           ></rect>
         </svg>
       </button>
-      <button class="button-two">
+      <button class="button-two" aria-expanded="false">
         <svg
           stroke="var(--button-color)"
           class="hamburger"
@@ -75,7 +75,12 @@
         </svg>
       </button>
 
-      <button class="button-three">
+      <button
+        class="button-three"
+        data-state="closed"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
         <svg
           stroke="var(--button-color)"
           class="hamburger"
