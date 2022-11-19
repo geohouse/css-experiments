@@ -51,3 +51,61 @@ button {
 
 .button-one[aria-expanded="true"] .top {
 }
+
+/* button two */
+
+.button-two {
+  --button-color: #ba55d3;
+}
+
+.button-two .line {
+  animation: to-open-icon 1s forwards;
+}
+
+.button-two:hover .line {
+  animation: to-close-icon 1s forwards;
+}
+
+.button-two .line.top {
+  --rotation: -45deg;
+  transform-origin: 60px 50px;
+}
+
+.button-two .line.bottom {
+  --rotation: 45deg;
+  transform-origin: 60px 50px;
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+
+@keyframes to-open-icon {
+  100% {
+    stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  0% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
